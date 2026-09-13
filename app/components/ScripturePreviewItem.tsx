@@ -11,10 +11,14 @@ export default function ScripturePreviewItem({
     item,
     action,
     landscape,
+    title,
+    cardWidth,
 }: {
     item: Chapter;
     action: Function;
     landscape: boolean;
+    title?: string;
+    cardWidth?: number;
 }) {
     const { width } = useSafeAreaFrame();
 
@@ -22,7 +26,9 @@ export default function ScripturePreviewItem({
         <Card
             style={[
                 previewStyles.CardContainer,
-                landscape ? previewStyles.width33 : previewStyles.width50,
+                cardWidth != null
+                    ? { width: cardWidth }
+                    : landscape ? previewStyles.width33 : previewStyles.width50,
                 width > 1024
                     ? previewStyles.aspectWide
                     : previewStyles.aspectNarrow,
@@ -36,7 +42,8 @@ export default function ScripturePreviewItem({
                 <Card.Title
                     style={previewStyles.CardHeader}
                     titleStyle={previewStyles.CardTitle}
-                    title={item.name}
+                    title={title ?? item.name}
+                    titleNumberOfLines={title ? 0 : 1}
                 ></Card.Title>
                 <View style={previewStyles.CardContent}>
                     <RenderHtml html={item.preview} />
@@ -71,18 +78,20 @@ const previewStyles = StyleSheet.create({
         overflow: "hidden",
     },
     CardHeader: {
-        flex: 1,
+        flexShrink: 0,
         backgroundColor: colors.cardBackground,
         width: "100%",
-        height: 12,
-        marginVertical: -16,
+        minHeight: 48,
+        marginVertical: 0,
     },
     CardTitle: {
         textAlign: "center",
         color: colors.darkText,
         fontWeight: "700",
         margin: 0,
-        paddingTop: 12,
+        paddingVertical: 6,
+        fontSize: 14,
+        lineHeight: 20,
         marginBottom: 0,
     },
     CardContent: {
@@ -91,7 +100,7 @@ const previewStyles = StyleSheet.create({
         minWidth: "100%",
         height: "100%",
         minHeight: "100%",
-        marginTop: 16,
+        marginTop: 6,
         overflow: "hidden",
     },
 });

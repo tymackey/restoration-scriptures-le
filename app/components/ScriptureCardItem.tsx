@@ -8,11 +8,13 @@ export default function ScriptureCardItem({
     action,
     cardWidth,
     landscape,
+    title,
 }: {
     item: { name: string };
     action: Function;
     cardWidth?: number;
     landscape?: boolean;
+    title?: string;
 }) {
     return (
         <Card
@@ -28,7 +30,7 @@ export default function ScriptureCardItem({
             >
                 <View style={styles.Card}>
                     <Text style={styles.CardText} numberOfLines={4}>
-                        {item.name}
+                        {title ?? item.name}
                     </Text>
                 </View>
             </Pressable>

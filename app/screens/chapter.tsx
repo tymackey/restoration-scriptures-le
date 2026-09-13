@@ -15,6 +15,7 @@ import { Chapter } from "../data/types";
 import ScripturePreviewItem from "../components/ScripturePreviewItem";
 import { useSafeAreaFrame } from "react-native-safe-area-context";
 import { commonStyles } from "../styles/commonStyles";
+import { formatChapterListLabel } from "../util/chapterLabels";
 
 function ChapterScreen({
     route,
@@ -62,6 +63,7 @@ function ChapterScreen({
         return (
             <ScriptureListItem
                 item={item}
+                title={formatChapterListLabel(item)}
                 action={(itemData: any) => navigate(itemData)}
             />
         );
@@ -73,8 +75,10 @@ function ChapterScreen({
         return (
             <ScripturePreviewItem
                 item={item}
+                title={formatChapterListLabel(item)}
                 action={(itemData: any) => navigate(itemData)}
                 landscape={isLandscape}
+                cardWidth={(width - 16 - 8 * (previewColumns - 1)) / previewColumns}
             />
         );
     };

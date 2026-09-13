@@ -6,9 +6,11 @@ import { colors } from "../constants/colors";
 export default function ScriptureListItem({
     item,
     action,
+    title,
 }: {
     item: { name: string };
     action: Function;
+    title?: string;
 }) {
     const handlePress = useCallback(() => {
         try {
@@ -20,11 +22,12 @@ export default function ScriptureListItem({
 
     return (
         <List.Item
-            containerStyle={styles.ListItemContainer}
+            containerStyle={[styles.ListItemContainer, title && title !== item.name ? styles.expanded : undefined]}
             style={styles.ListItem}
             titleStyle={styles.ListItemContent}
             onPress={handlePress}
-            title={item.name}
+            title={title ?? item.name}
+            titleNumberOfLines={title && title !== item.name ? 0 : 1}
             right={(props) => (
                 <List.Icon
                     {...props}
@@ -41,6 +44,10 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
         height: 32,
         marginVertical: 0,
+    },
+    expanded: {
+        height: "auto",
+        minHeight: 32,
     },
     ListItem: {
         backgroundColor: colors.background,

@@ -18,6 +18,8 @@ import { useEffect, useState, useMemo } from "react";
 import { CardLayoutConfig, useCardLayout } from "../util/cardLayoutUtils";
 import { useShallow } from "zustand/react/shallow";
 
+import { formatBookListLabel } from "../util/chapterLabels";
+
 export default function VolumeList({ items }: { items: any[] }) {
     const navigation = useNavigation<DrawerNavigationProp<any>>();
     const layout = useSettingsStore((state) => state.layout);
@@ -75,6 +77,7 @@ export default function VolumeList({ items }: { items: any[] }) {
         return (
             <ScriptureListItem
                 item={item}
+                title={formatBookListLabel(item)}
                 action={(itemData: any) => navigate(itemData)}
             />
         );
@@ -84,6 +87,7 @@ export default function VolumeList({ items }: { items: any[] }) {
         return (
             <ScriptureCardItem
                 item={item}
+                title={formatBookListLabel(item)}
                 action={(itemData: any) => navigate(itemData)}
                 cardWidth={cardWidth}
                 landscape={isLandscape}
