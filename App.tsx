@@ -24,6 +24,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 Sentry.init({
+    enabled: false, // Local test copy: no reports to the original developer.
     dsn: "https://df7484bebd748a562768832ba9c3ba6f@o4509890604236800.ingest.us.sentry.io/4509890606137344",
 
     // Do not attach PII (IP address, cookies, user, etc.) to events.
