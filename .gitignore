@@ -103,3 +103,20 @@ AuthKey_*.p8
 # SQLite
 assets/*.db-shm
 assets/*.db-wal
+
+# Personal mod build products and local state
+*.app/
+*.xcarchive/
+*.dSYM/
+*.zip
+*.tar
+*.log
+.env
+.env.*
+!.env.example
+*.p12
+*.mobileprovision
+*.db-shm
+*.db-wal
+/build-logs/
+/backups/

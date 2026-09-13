@@ -1,0 +1,103 @@
+--- a/app.json
++++ b/app.json
+@@ -1,8 +1,8 @@
+ {
+   "expo": {
+-    "name": "Restoration Scriptures",
+-    "slug": "rescriptures",
+-    "scheme": "rescriptures",
++    "name": "Scriptures LE Test",
++    "slug": "scriptures-le-test",
++    "scheme": "rescriptures-lelabels",
+     "version": "3.1.0",
+     "orientation": "default",
+     "icon": "./assets/icon.png",
+@@ -21,12 +21,8 @@
+         ],
+         "ITSAppUsesNonExemptEncryption": false
+       },
+-      "bundleIdentifier": "info.scriptures.rescriptures",
+-      "runtimeVersion": "1.0.0",
+-      "appleTeamId": "36WDHRH88Y",
+-      "associatedDomains": [
+-        "applinks:scriptures.info"
+-      ]
++      "bundleIdentifier": "info.scriptures.rescriptures.lelabels",
++      "runtimeVersion": "1.0.0"
+     },
+     "android": {
+       "adaptiveIcon": {
+@@ -36,24 +32,7 @@
+       "runtimeVersion": {
+         "policy": "appVersion"
+       },
+-      "package": "info.scriptures.rescriptures",
+-      "intentFilters": [
+-        {
+-          "action": "VIEW",
+-          "autoVerify": true,
+-          "data": [
+-            {
+-              "scheme": "https",
+-              "host": "scriptures.info",
+-              "pathPrefix": "/scriptures"
+-            }
+-          ],
+-          "category": [
+-            "BROWSABLE",
+-            "DEFAULT"
+-          ]
+-        }
+-      ]
++      "package": "info.scriptures.rescriptures.lelabels"
+     },
+     "web": {
+       "favicon": "./assets/icon.png"
+@@ -84,14 +63,6 @@
+         }
+       ],
+       [
+-        "@sentry/react-native/expo",
+-        {
+-          "url": "https://sentry.io/",
+-          "project": "restoration-scriptures",
+-          "organization": "restoration-scriptures-foundat"
+-        }
+-      ],
+-      [
+         "expo-build-properties",
+         {
+           "android": {
+@@ -103,20 +74,15 @@
+         }
+       ],
+       "expo-document-picker",
+-      "@sentry/react-native",
+       "expo-image",
+       "expo-sharing"
+     ],
+     "experiments": {
+       "reactCompiler": true
+     },
+-    "extra": {
+-      "eas": {
+-        "projectId": "23765abd-66e2-4735-825c-86662384506f"
+-      }
+-    },
++    "extra": {},
+     "updates": {
+-      "url": "https://u.expo.dev/23765abd-66e2-4735-825c-86662384506f"
++      "enabled": false
+     }
+   }
+ }
+--- a/App.tsx
++++ b/App.tsx
+@@ -24,6 +24,7 @@
+ import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+ 
+ Sentry.init({
++    enabled: false, // Local test copy: no reports to the original developer.
+     dsn: "https://df7484bebd748a562768832ba9c3ba6f@o4509890604236800.ingest.us.sentry.io/4509890606137344",
+ 
+     // Do not attach PII (IP address, cookies, user, etc.) to events.
