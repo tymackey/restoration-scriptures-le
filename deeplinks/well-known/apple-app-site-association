@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["36WDHRH88Y.info.scriptures.rescriptures"],
+        "components": [
+          {
+            "/": "/scriptures/*",
+            "comment": "Open a scripture reference in the Restoration Scriptures app"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["36WDHRH88Y.info.scriptures.rescriptures"]
+  }
+}

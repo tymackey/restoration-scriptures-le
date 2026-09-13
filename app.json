@@ -1,0 +1,122 @@
+{
+  "expo": {
+    "name": "Restoration Scriptures",
+    "slug": "rescriptures",
+    "scheme": "rescriptures",
+    "version": "3.1.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "info.scriptures.rescriptures",
+      "runtimeVersion": "1.0.0",
+      "appleTeamId": "36WDHRH88Y",
+      "associatedDomains": [
+        "applinks:scriptures.info"
+      ]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
+      },
+      "package": "info.scriptures.rescriptures",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "scriptures.info",
+              "pathPrefix": "/scriptures"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "./plugins/withSplashPadding",
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true
+        }
+      ],
+      "expo-asset",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/EBGaramond-Regular.ttf",
+            "./assets/fonts/Assistant-Regular.ttf",
+            "./assets/fonts/OpenDyslexic-Regular.otf"
+          ]
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "DEFAULT"
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "restoration-scriptures",
+          "organization": "restoration-scriptures-foundat"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "extraProguardRules": "-keep public class com.horcrux.svg.** {*;}",
+            "allowBackup": false
+          }
+        }
+      ],
+      "expo-document-picker",
+      "@sentry/react-native",
+      "expo-image",
+      "expo-sharing"
+    ],
+    "experiments": {
+      "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "23765abd-66e2-4735-825c-86662384506f"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/23765abd-66e2-4735-825c-86662384506f"
+    }
+  }
+}

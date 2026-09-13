@@ -1,0 +1,64 @@
+{
+    "cli": {
+        "version": ">= 16.9.0",
+        "appVersionSource": "remote"
+    },
+    "build": {
+        "development": {
+            "developmentClient": true,
+            "distribution": "internal",
+            "channel": "development",
+            "env": {
+                "SENTRY_ORG": "restoration-scriptures-foundat",
+                "SENTRY_PROJECT": "restoration-scriptures",
+                "SENTRY_URL": "https://sentry.io/"
+            }
+        },
+        "preview": {
+            "distribution": "internal",
+            "channel": "preview",
+            "env": {
+                "SENTRY_ORG": "restoration-scriptures-foundat",
+                "SENTRY_PROJECT": "restoration-scriptures",
+                "SENTRY_URL": "https://sentry.io/"
+            }
+        },
+        "apkpreview": {
+            "android": {
+                "buildType": "apk"
+            },
+            "channel": "apkpreview",
+            "env": {
+                "SENTRY_LOG_LEVEL": "debug",
+                "SENTRY_ORG": "restoration-scriptures-foundat",
+                "SENTRY_PROJECT": "restoration-scriptures",
+                "SENTRY_URL": "https://sentry.io/",
+                "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+            }
+        },
+        "production": {
+            "autoIncrement": true,
+            "channel": "production",
+            "env": {
+                "SENTRY_ORG": "restoration-scriptures-foundat",
+                "SENTRY_PROJECT": "restoration-scriptures", 
+                "SENTRY_URL": "https://sentry.io/"
+            }
+        }
+    },
+    "submit": {
+        "production": {
+            "ios": {
+                "ascAppId": "6747697829",
+                "ascApiKeyPath": "./AuthKey_LFB46598FF.p8",
+                "ascApiKeyIssuerId": "6f7e33dc-5831-4ec4-9bf4-9c683f8afbe3",
+                "ascApiKeyId": "LFB46598FF"
+            },
+            "android": {
+                "serviceAccountKeyPath": "./google-service-account.json",
+                "track": "production",
+                "releaseStatus": "draft"
+            }
+        }
+    }
+}

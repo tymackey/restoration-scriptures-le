@@ -1,0 +1,49 @@
+{
+    "configVersion": 0,
+    "version": "2.0.2",
+    "copyright": "© 2025 Scriptures.info - Text V1.417 - 2024.03.24",
+    "apple": {
+      "info": {
+        "en-US": {
+          "title": "Restoration Scriptures",
+          "subtitle": "Read, search, or listen to the full text of the Restoration Edition Scriptures.",
+          "description": "Read and search offline the complete text of the Restoration Edition of the scriptures. Quickly locate scripture content by volume, book, and chapter.\n\nThe following volumes of Restoration scriptures are included:\n\n• The Covenant of Christ\n• The Old Covenants\n• The New Covenants (includes the New Testament and the Book of Mormon)\n• Teachings & Commandments (including the complete Joseph Smith History, the Lectures on Faith, the Book of Abraham, the Testimony of St. John, as well as history, revelations, letters, talks and documents of value since the beginning of the Restoration of the Gospel.)\n• A Glossary of Gospel Terms (offered as helpful inspired commentary on different terms used throughout the text), maps, and other helpful items.\n\nThe Restoration Edition text represents thousands of hours of careful work by a committee of volunteers. Their purpose is to compile the most accurate and complete set of scriptures based on the restoration of the gospel of Jesus Christ that began in the early 1800's through Joseph Smith, Jr.\n\nThe committee responsible for this compilation of scriptures, and the developer of this app, have done this work as an expression of faith in Jesus Christ, and not as representing any church or organization. This app is to serve the various fellowships of Covenant Christians and all those seeking the welfare of Zion.\n\nMore information about the beliefs of those involved in this work can be found at the following websites:\n• http://scriptures.info/\n• https://www.restorationarchives.com/\n\n© 2025 Scriptures.info - Text V1.417 - 2024.03.24",
+          "keywords": ["scripture", "study", "books", "reference"],
+          "releaseNotes": "Rebuilt from the ground up, with:\n- Better keyword search page with improved filtering\n- A reference converter\n- A history page for recently viewed chapters\n- Scripture Audio player with 4 voices and variable speeds\n- Improved reading display options dialog, including:\n\t- A Serif, Sans-Serif, and Open Dyslexic fonts\n\t- Buttons to instantly increase/decrease font size\n\t- Six color schemes (3 light and 3 dark)\n- Updated text, including the Covenant of Christ with red verse numbers",
+          "marketingUrl": "https://scriptures.info",
+          "supportUrl": "email:rescriptures@tuta.io",
+          "privacyPolicyUrl": "https://gitlab.com/dreavis/re-scriptures-rn/-/blob/main/PRIVACY_POLICY.md"
+        }
+      },
+      "advisory": {
+        "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+        "contests": "NONE",
+        "gamblingSimulated": "NONE",
+        "horrorOrFearThemes": "NONE",
+        "matureOrSuggestiveThemes": "NONE",
+        "medicalOrTreatmentInformation": "NONE",
+        "profanityOrCrudeHumor": "NONE",
+        "sexualContentGraphicAndNudity": "NONE",
+        "sexualContentOrNudity": "NONE",
+        "violenceCartoonOrFantasy": "NONE",
+        "violenceRealistic": "NONE",
+        "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+        "gambling": false,
+        "unrestrictedWebAccess": false,
+        "kidsAgeBand": null,
+        "ageRatingOverride": "NONE",
+        "koreaAgeRatingOverride": "NONE"
+      },
+      "categories": [ "BOOKS", "REFERENCE" ],
+      "languages": [ "en-US" ],
+      "release": {
+        "automaticRelease": true
+      },
+      "review": {
+        "firstName": "Daren",
+        "lastName": "Reavis",
+        "email": "rescriptures@tuta.io",
+        "phone": "+1 801 897 5878"
+      }
+    }
+  }

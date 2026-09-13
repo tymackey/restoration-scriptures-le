@@ -1,0 +1,36 @@
+diff --git c/scripts/0006_tc/0010_appendix/004.maps_appendix.xml w/scripts/0006_tc/0010_appendix/004.maps_appendix.xml
+new file mode 100644
+index 0000000..fb90b20
+--- /dev/null
++++ w/scripts/0006_tc/0010_appendix/004.maps_appendix.xml
+@@ -0,0 +1,30 @@
++<chapter>
++  <h3 class="chap sectionHeader">MAPS</h3>
++
++  <h4>Israel's Exodus from Egypt to Canaan</h4>
++  <img src="/Images/tc/map1.jpg" class="img-responsive zoomable" alt="Israel's Exodus from Egypt to Canaan" />
++
++  <h4>Israelite Tribal Allotments</h4>
++  <img src="/Images/tc/map2.jpg" class="img-responsive zoomable" alt="Israelite Tribal Allotments" />
++
++  <h4>Kingdoms of Israel &amp; Judah (circa 930 B.C.)</h4>
++  <img src="/Images/tc/map3.jpg" class="img-responsive zoomable" alt="Kingdoms of Israel &amp; Judah (circa 930 B.C.)" />
++
++  <h4>Holy Land in New Testament Times</h4>
++  <img src="/Images/tc/map4.jpg" class="img-responsive zoomable" alt="Holy Land in New Testament Times" />
++
++  <h4>Jerusalem at the Time of Christ</h4>
++  <img src="/Images/tc/map5.jpg" class="img-responsive zoomable" alt="Jerusalem at the Time of Christ" />
++
++  <h4>Temple Complex at the Time of Christ</h4>
++  <img src="/Images/tc/map6.jpg" class="img-responsive zoomable" alt="Temple Complex at the Time of Christ" />
++
++  <h4>Paul's First and Second Missionary Journeys</h4>
++  <img src="/Images/tc/map7.jpg" class="img-responsive zoomable" alt="Paul's First and Second Missionary Journeys" />
++
++  <h4>Paul's Third and Fourth Journeys</h4>
++  <img src="/Images/tc/map8.jpg" class="img-responsive zoomable" alt="Paul's Third and Fourth Journeys" />
++
++  <h4>Early Restoration Sites</h4>
++  <img src="/Images/tc/map9.jpg" class="img-responsive zoomable" alt="Early Restoration Sites" />
++</chapter>

@@ -1,0 +1,15 @@
+{
+  "description": "Read and study the complete text of the Restoration Edition of the scriptures in this new app. The app makes it easy to quickly locate scripture content by volume, book and chapter. The reading experience is fully customizable, allowing the user to select fonts and text sizes, choose margin width and line spacing, and select from several color schemes. The full text of the scriptures is included in the app for offline reading. \n\nContains the following volumes of Restoration scriptures:\n* Old Testament\n* New Testament\n* Book of Mormon\n* Doctrine and Covenants\n* Pearls of Great Price\n\nThe Restoration Edition text represents thousands of hours of careful work by a committee of volunteers. Their purpose is to compile the most accurate and complete set of scriptures based on the restoration of the gospel of Jesus Christ that began in the early 1800’s through Joseph Smith, Jr. \n\nThe Restoration Edition, the committee responsible for its compilation, and the developer of this app are not affiliated in any way with the Church of Jesus Christ of Latter-day Saints or any other church or organization. This effort serves a loose association of fellowships of believers in the Doctrine of Christ. \n\nThis version of the app contains the March 2017 version of the text. Many changes have been made since that date, and the editing work continues at this time. When the final print edition has been finalized by the scriptures committee, a new version of this app will be released containing the updated text.",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "Native Android Application",
+  "repository": "",
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "bluebird": "^3.5.1",
+    "cheerio": "^1.0.0-rc.3",
+    "he": "^1.2.0",
+    "lodash": "^4.17.15",
+    "npm": "^6.13.4"
+  },
+  "author": "Daren Reavis"
+}
