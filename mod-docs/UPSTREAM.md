@@ -12,4 +12,4 @@ The scripture database, wording, cover art, maps, fonts, dependency patches, and
 
 `PRIVACY_POLICY.md`, `CLAUDE.md`, `eas.json`, and store metadata originate upstream. Some describe official-app services or release workflows; the personal test build differs as documented in `BUILD.md` and `CHANGES.md`. In particular, crash reporting and upstream updates are disabled, and the original EAS/App Store submission configuration is not a deployment route for this personal project.
 
-The repository was created privately as a personal source archive. Publishing or distributing a branded derivative remains a separate decision; the upload itself is not an official release.
+The repository was initially created privately, then made public at Ty Mackey's request on September 13, 2026. Public source availability is not an official app release and does not change the upstream rights notices above. Compiled app distribution remains separate work.
