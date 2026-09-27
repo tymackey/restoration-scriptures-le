@@ -1,5 +1,7 @@
 # Validation and remaining work
 
+**September 27 update:** [MAC-BUILD.md](MAC-BUILD.md) records the completed standalone Mac build and its current validation. The sections below preserve the earlier September 13 checks and limitations.
+
 ## Automated checks
 
 The feature suite consists of 17 checks:

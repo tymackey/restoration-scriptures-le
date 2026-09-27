@@ -18,7 +18,7 @@ import { useShallow } from "zustand/react/shallow";
 import { StatusBar } from "expo-status-bar";
 import * as Sentry from "@sentry/react-native";
 import { AppMetricsRoot } from "expo-observe";
-import { AppState, AppStateStatus, StyleSheet } from "react-native";
+import { AppState, AppStateStatus, StyleSheet, Platform, useWindowDimensions } from "react-native";
 import { AutocompleteDropdownContextProvider } from "react-native-autocomplete-dropdown";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
@@ -95,6 +95,14 @@ export default AppMetricsRoot.wrap(
             useShallow((state) => state.setIsLandscape),
         );
 
+        const { width, height } = useWindowDimensions();
+        const isMacCatalyst = Platform.OS === "ios" && Platform.isMacCatalyst;
+
+        useEffect(() => {
+            // A Mac window changes shape without a device-orientation event.
+            if (isMacCatalyst) setIsLandscape(width > height);
+        }, [width, height, isMacCatalyst, setIsLandscape]);
+
         useEffect(() => {
             // Initialize audio player only once
             let unmounted = false;
@@ -109,7 +117,7 @@ export default AppMetricsRoot.wrap(
 
             // Listen for orientation changes
             const orientationSubscription =
-                ScreenOrientation.addOrientationChangeListener((event) => {
+                isMacCatalyst ? null : ScreenOrientation.addOrientationChangeListener((event) => {
                     const landscape =
                         event.orientationInfo.orientation ===
                             ScreenOrientation.Orientation.LANDSCAPE_LEFT ||
@@ -121,7 +129,7 @@ export default AppMetricsRoot.wrap(
             // Cleanup subscriptions on unmount
             return () => {
                 unmounted = true;
-                orientationSubscription.remove();
+                orientationSubscription?.remove();
             };
         }, []);
 

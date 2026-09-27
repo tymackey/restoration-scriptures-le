@@ -2,7 +2,7 @@
 
 Ty Mackey's personal modification of **Restoration Scriptures**, adding familiar chapter and section references to scripture navigation. This repository preserves the modified source, the original comparison baseline, and the decisions behind every requested change.
 
-**Status: working iPhone/iPad Simulator build.** On the development Mac, an Applications launcher opens the test app in iPad Simulator. A standalone Mac build and a signed physical-iPhone installation remain future work. This is an unofficial personal project, not an official release.
+**Status: standalone Mac build installed locally on September 27, 2026**, in addition to the earlier iPhone/iPad Simulator build. Open **Scriptures LE** from Applications on the development Mac. It runs directly without Simulator. See [Mac build and validation](mod-docs/MAC-BUILD.md) for reproducible steps and test coverage. Public distribution signing/notarization and physical-iPhone installation remain separate work. This is an unofficial personal project, not an official release.
 
 ## What changed
 
@@ -22,6 +22,7 @@ Scripture wording, canonical chapter names, verse numbering, and the existing re
 | [Changes and decisions](mod-docs/CHANGES.md) | Each user request, before/after behavior, implementation, and scope |
 | [Complete label audit](mod-docs/CHAPTER-LABEL-AUDIT.md) | Every generated chapter and section label |
 | [Mapping methodology](mod-docs/MAPPINGS.md) | Sources, coverage, partial chapters, D&C gaps, and exceptions |
+| [Standalone Mac build](mod-docs/MAC-BUILD.md) | Mac Catalyst configuration, packaging, installation, and validation |
 | [Build and run](mod-docs/BUILD.md) | Local Simulator build, launcher limitations, and device requirements |
 | [Validation and limitations](mod-docs/VALIDATION.md) | Automated checks, native checks, user-confirmed scrolling, and remaining work |
 | [Maintenance and rollback](mod-docs/MAINTENANCE.md) | File map, update procedure, and recovery options |

@@ -1,6 +1,6 @@
 # Changes requested by Ty Mackey
 
-Recorded September 13, 2026. This describes the final implemented behavior and distinguishes it from requested future distribution work. The original Restoration Scriptures app is credited in [UPSTREAM.md](UPSTREAM.md).
+Original feature record: September 13, 2026. **September 27 update:** the standalone Mac build is now installed locally; [MAC-BUILD.md](MAC-BUILD.md) records its configuration, packaging fixes and validation. The numbered sections below describe the September 13 state. This describes the final implemented behavior and distinguishes it from requested future distribution work. The original Restoration Scriptures app is credited in [UPSTREAM.md](UPSTREAM.md).
 
 ## 1. Show familiar Book of Mormon chapters next to RE chapters
 

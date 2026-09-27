@@ -120,3 +120,7 @@ assets/*.db-wal
 *.db-wal
 /build-logs/
 /backups/
+
+# Python build helper caches
+__pycache__/
+*.pyc

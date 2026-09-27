@@ -75,6 +75,6 @@ To package it, compile the Swift source as a macOS AppKit executable, put it in 
 
 A simulator binary cannot be installed on a physical phone. A device build needs an Apple signing identity, a provisioning profile, and a device/distribution workflow. Those steps have not been completed. The simulator tests cover the shared iPhone UI source, not installation or performance on a real phone.
 
-A standalone Mac version also remains future work. It must be built for an appropriate Mac-supported target and validated for normal wheel/trackpad scrolling, keyboard interaction, windows, audio, and storage. The Applications launcher does not supply that port.
+A standalone Mac Catalyst version was built and installed locally on September 27, 2026. Follow [MAC-BUILD.md](MAC-BUILD.md) for its separate build/package commands, validation and limitations. **Scriptures LE** is the standalone app; **Scriptures LE Test** is the older Simulator launcher.
 
 `eas.json` is retained from upstream for historical context and still describes the original developer's service/submission targets. Do not use those targets for this personal project. Local Simulator builds above do not use EAS. A future EAS or App Store workflow must use this project's own accounts and configuration.
