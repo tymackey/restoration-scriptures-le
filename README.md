@@ -4,6 +4,10 @@ Ty Mackey's personal modification of **Restoration Scriptures**, adding familiar
 
 **Status: standalone Mac build installed locally on September 27, 2026**, in addition to the earlier iPhone/iPad Simulator build. Open **Scriptures LE** from Applications on the development Mac. It runs directly without Simulator. See [Mac build and validation](mod-docs/MAC-BUILD.md) for reproducible steps and test coverage. Public distribution signing/notarization and physical-iPhone installation remain separate work. This is an unofficial personal project, not an official release.
 
+## Saved Mac app
+
+Download the app ZIP from [Mac app backup — September 27, 2026](https://github.com/tymackey/restoration-scriptures-le/releases/tag/mac-local-2026-09-27). This is the tested Apple Silicon Mac build, saved as a personal backup. It runs without Xcode or Simulator, but is locally signed and not notarized; a downloaded copy may be blocked by macOS security checks. The ZIP contains the application, not personal reading data or annotations. See the release notes and [Mac build instructions](mod-docs/MAC-BUILD.md) for details.
+
 ## What changed
 
 - **Book of Mormon and Covenant of Christ:** all 114 numbered chapters in each edition display their corresponding LDS-edition chapter ranges, such as `2 Nephi 1 (LE 1-2)`.
@@ -37,7 +41,7 @@ node --test scripts/verify-chapter-labels.mjs scripts/verify-tc-index.mjs
 python3 scripts/generate-chapter-ranges.py --check
 ```
 
-To build the app, follow [Build and run](mod-docs/BUILD.md). This repository contains source and the bundled scripture database, not compiled app bundles or personal annotations.
+To build the app, follow [Build and run](mod-docs/BUILD.md). The Git source tree contains source and the bundled scripture database. The compiled Mac backup is attached separately under Releases; personal annotations are not included.
 
 ## History
 
